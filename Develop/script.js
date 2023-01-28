@@ -2,12 +2,26 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
+// const hrInput9 = $('#9text');
+// const save = $('.savebtn');
+
+const hrInput9 = document.getElementById("9text");
+const save = document.getElementsByClassName("saveBtn");
+
+
+
+save.onclick = function () {
+  const log9 = hrInput9.value;
+  
+  console.log(log9);
+  
+};
+
 var today = dayjs();
 $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
 
-const timeContinuum = dayjs().hour()
-const workArray = 
-
+// const timeContinuum = dayjs().hour()
+// const workArray = 
 
 //options for past-present-future color code
 
