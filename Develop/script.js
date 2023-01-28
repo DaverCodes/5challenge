@@ -3,7 +3,52 @@
 // in the html.
 
 var today = dayjs();
-$('#1a').text(today.format('MMM DD, YYYY [at] hh:mm:ss a'));
+$('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
+
+const timeContinuum = dayjs().hour()
+const workArray = 
+
+
+//options for past-present-future color code
+
+
+//______________option#1___________________________________
+// timeBlocks.forEach(block => {
+//   const blockHour = block.firstElementChild.id;
+//   const blockDiv = block.lastElementChild;
+
+
+// if (workArray < timeContinuum) {
+//   blockDiv.classList.add("past");
+//   blockDiv.classList.remove("present", "future");
+// } else if workArray === timeContinuum) {
+//   blockDiv.classList.add("present");
+//   blockDiv.classList.remove("past", "future");
+// } else {
+//   blockDiv.classList.add("future");
+//   blockDiv.classList.remove("past", "present");
+// }
+// });
+
+//____________________option#2_________________________________________________
+// function isTimePastPresentorFuture (workArray)  
+// {  
+//   if (workArray == timeContinuum)  
+//   {  
+//     return "Correct";  
+//   }  
+//   else if (workArray > numberToGuess)  
+//   {  
+//     return "Lower";  
+//   }  
+//   else  
+//   {  
+//     return "Higher";  
+//   }  
+// }
+
+//______________________________________________________________
+
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -25,6 +70,10 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+// javascript code that knows if a number between 9 and 17 is greater than- less thab- or equal to any other number in that array
+
+
 
 
 
