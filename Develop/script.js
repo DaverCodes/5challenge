@@ -5,8 +5,10 @@
 // const hrInput9 = $('#9text');
 // const save = $('.savebtn');
 
+//HAD TO MAKE ID FOR TIME 9 ( SAVE BUTTON)
+
 const hrInput9 = document.getElementById("9text");
-const save = document.getElementsByClassName("saveBtn");
+const save = document.getElementById("saveBtn");
 
 
 
@@ -14,7 +16,11 @@ save.onclick = function () {
   const log9 = hrInput9.value;
   
   console.log(log9);
-  
+  localStorage.setItem('9am', log9);
+  location.reload();
+
+
+
 };
 
 var today = dayjs();
