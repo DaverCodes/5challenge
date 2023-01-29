@@ -1,6 +1,7 @@
 
 const textZones = [...document.querySelectorAll('.col-8')];
 const buttons = [...document.querySelectorAll('.btn')];
+const textarray = document.getElementById('.9text')
 const hourArray = ['9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM'];
 console.log(hourArray);
 
@@ -32,14 +33,16 @@ buttons.forEach(function(buttonArrayFinder) {
 var keyList = Object.keys(localStorage)
 console.log(keyList);
 
+
+
 // var SavedText = localStorage.getItem()
 // console.log(SavedText);
 
 if (hourArray.includes(keyList)) {
-  let foundText = localStorage.getItem(keyList)
-  console.log(foundText);
-
+  localStorage.getItem(keyList)
 }
+let 
+console.log(localStorage.getItem("9am"));
 
 var today = dayjs();
 $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
@@ -62,42 +65,6 @@ $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
 //options for past-present-future color code
 
 
-//______________option#1___________________________________
-// timeBlocks.forEach(block => {
-//   const blockHour = block.firstElementChild.id;
-//   const blockDiv = block.lastElementChild;
-
-
-// if (workArray < timeContinuum) {
-//   blockDiv.classList.add("past");
-//   blockDiv.classList.remove("present", "future");
-// } else if workArray === timeContinuum) {
-//   blockDiv.classList.add("present");
-//   blockDiv.classList.remove("past", "future");
-// } else {
-//   blockDiv.classList.add("future");
-//   blockDiv.classList.remove("past", "present");
-// }
-// });
-
-//____________________option#2_________________________________________________
-// function isTimePastPresentorFuture (workArray)  
-// {  
-//   if (workArray == timeContinuum)  
-//   {  
-//     return "Correct";  
-//   }  
-//   else if (workArray > numberToGuess)  
-//   {  
-//     return "Lower";  
-//   }  
-//   else  
-//   {  
-//     return "Higher";  
-//   }  
-// }
-
-//______________________________________________________________
 
 
 $(function () {
