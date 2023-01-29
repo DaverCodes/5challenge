@@ -13,29 +13,49 @@ const save = document.getElementById("saveBtn");
 
 const textZones = [...document.querySelectorAll('.col-8')];
 const buttons = [...document.querySelectorAll('.btn')];
-console.log(buttons, textZones);
 
 buttons.forEach(function(buttonArrayFinder) {
   buttonArrayFinder.addEventListener('click', function() {
     let saveArrayPoint = buttons.indexOf(this);
     console.log(saveArrayPoint);
     let saveText = textZones[saveArrayPoint].value
-    console.log(saveText);
-    localStorage.setItem('log', saveText)
+    if (saveArrayPoint < 12) {
+      let logHr = saveArrayPoint + 9 + 'AM'
+      console.log(logHr, saveText);
+      localStorage.setItem(logHr, saveText)
+    } else {
+      if (saveArrayPoint = 12) {
+        let logHr = 12 + 'PM'
+        console.log(logHr, saveText);
+        localStorage.setItem(logHr, saveText)
+      } else {
+        if (saveArrayPoint > 12) {
+          let logHr = saveArrayPoint - 12 + PM
+          console.log(logHr, saveText);
+          localStorage.setItem(logHr, saveText)
+        }
+      }
+    }
   });
 });
 
+let number = 15;
+if (number > 12) {
+    number -= 12;
+    console.log(number + "pm");
+}
 
-save.onclick = function () {
-  const log9 = hrInput9.value;
+
+// save.onclick = function () {
+//   const log9 = hrInput9.value;
   
-  console.log(log9);
-  localStorage.setItem('9am', log9);
-  location.reload();
+//   console.log(log9);
+//   localStorage.setItem('9am', log9);
+//   location.reload();
 
 
 
-};
+// };
 
 var today = dayjs();
 $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
