@@ -1,31 +1,21 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-// const hrInput9 = $('#9text');
-// const save = $('.savebtn');
-
-//HAD TO MAKE ID FOR TIME 9 ( SAVE BUTTON)
-
-const hrInput9 = document.getElementById("9text");
-const save = document.getElementById("saveBtn");
-
 
 const textZones = [...document.querySelectorAll('.col-8')];
 const buttons = [...document.querySelectorAll('.btn')];
+const hourArray = ['9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM'];
+console.log(hourArray);
 
 buttons.forEach(function(buttonArrayFinder) {
   buttonArrayFinder.addEventListener('click', function() {
     let saveArrayPoint = buttons.indexOf(this);
     console.log(saveArrayPoint);
     let saveText = textZones[saveArrayPoint].value
-    if (saveArrayPoint < 12) {
+    if (saveArrayPoint <= 11) {
       let logHr = saveArrayPoint + 9 + 'AM'
       console.log(logHr, saveText);
       localStorage.setItem(logHr, saveText)
     } else {
       if (saveArrayPoint = 12) {
-        let logHr = 12 + 'PM'
+        let logHr = saveArrayPoint + 'PM'
         console.log(logHr, saveText);
         localStorage.setItem(logHr, saveText)
       } else {
@@ -38,13 +28,14 @@ buttons.forEach(function(buttonArrayFinder) {
     }
   });
 });
+// get item and put it in text area
+var keyList = Object.keys(localStorage)
+console.log(keyList);
 
-let number = 15;
-if (number > 12) {
-    number -= 12;
-    console.log(number + "pm");
-}
 
+
+var today = dayjs();
+$('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
 
 // save.onclick = function () {
 //   const log9 = hrInput9.value;
@@ -57,8 +48,6 @@ if (number > 12) {
 
 // };
 
-var today = dayjs();
-$('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
 
 // const timeContinuum = dayjs().hour()
 // const workArray = 
