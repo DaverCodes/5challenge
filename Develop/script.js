@@ -11,6 +11,9 @@ const hrInput9 = document.getElementById("9text");
 const save = document.getElementById("saveBtn");
 
 
+const textZones = [...document.querySelectorAll('.col-8')];
+const buttons = [...document.querySelectorAll('.btn')];
+console.log(buttons, textZones);
 
 save.onclick = function () {
   const log9 = hrInput9.value;
