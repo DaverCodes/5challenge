@@ -32,7 +32,14 @@ buttons.forEach(function(buttonArrayFinder) {
 var keyList = Object.keys(localStorage)
 console.log(keyList);
 
+// var SavedText = localStorage.getItem()
+// console.log(SavedText);
 
+if (hourArray.includes(keyList)) {
+  let foundText = localStorage.getItem(keyList)
+  console.log(foundText);
+
+}
 
 var today = dayjs();
 $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
