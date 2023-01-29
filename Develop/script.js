@@ -15,6 +15,17 @@ const textZones = [...document.querySelectorAll('.col-8')];
 const buttons = [...document.querySelectorAll('.btn')];
 console.log(buttons, textZones);
 
+buttons.forEach(function(buttonArrayFinder) {
+  buttonArrayFinder.addEventListener('click', function() {
+    let saveArrayPoint = buttons.indexOf(this);
+    console.log(saveArrayPoint);
+    let saveText = textZones[saveArrayPoint].value
+    console.log(saveText);
+    localStorage.setItem('log', saveText)
+  });
+});
+
+
 save.onclick = function () {
   const log9 = hrInput9.value;
   
