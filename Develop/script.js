@@ -37,17 +37,47 @@ buttons.forEach(function(buttonArrayFinder) {
 // THEN the saved events persist= local storage
 var keyList = Object.keys(localStorage)
 console.log(keyList);
+//stackoverflow
+$(document).ready(function () {
+  var savesnotesbtn = document.getElementById("savenotesbtn");
+
+  //FILL TEXT AREAS WITH NOTES
+  for (var i = 1; i < 11; i++) {
+    $("#note" + i + "input").val(localStorage.getItem("note" + i));
+  }
+
+  function saveNotes() {
+    //Change styles of button
+    $("#savenotesbtn").removeClass("notSaved").addClass("Saved");
+    // Save data to localstorage
+    for (var i = 1; i < 11; i++) {
+      localStorage.setItem("note" + i, $("#note" + i + "input").val());
+    }
+  };
+  savesnotesbtn.addEventListener("click", saveNotes);
+});
+//stack overflow
+
+//chat
+const id = document.getElementById("id");
+const textArea = document.getElementById("textArea");
+const key = id.innerHTML;
+const value = localStorage.getItem(key);
+if (value) {
+  textArea.value = value;
+}
+//
 
 
 
 // var SavedText = localStorage.getItem()
 // console.log(SavedText);
 
-if (hourArray.includes(keyList)) {
-  localStorage.getItem(keyList)
-}
-let 
-console.log(localStorage.getItem("9am"));
+// if (hourArray.includes(keyList)) {
+//   localStorage.getItem(keyList)
+// }
+// let 
+// // console.log(localStorage.getItem("9am"));
 
 
 
@@ -64,7 +94,6 @@ $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
 
 
 
-});
 
 // javascript code that knows if a number between 9 and 17 is greater than- less thab- or equal to any other number in that array
 
