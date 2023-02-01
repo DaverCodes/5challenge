@@ -39,4 +39,4 @@ console.log(keyList);
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar = add day.js
 var today = dayjs();
-$('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm:ss:SSS'));
+$('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm a'));
