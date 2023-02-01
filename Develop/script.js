@@ -10,62 +10,83 @@ buttons.forEach(function(buttonArrayFinder) {
     let saveArrayPoint = buttons.indexOf(this);
     console.log(saveArrayPoint);
     let saveText = textZones[saveArrayPoint].value
-    let logHr = saveArrayPoint + 9 
-    console.log(logHr, saveText);
+    // let logHr = 'hr' + saveArrayPoint + 9 
+    let logHr = saveArrayPoint + 9
+    // console.log(logHr, saveText);
     localStorage.setItem(logHr, saveText)
 
-    if (saveArrayPoint <= 11) {
-      let logHr = saveArrayPoint + 9 
+    if (saveArrayPoint) {
       console.log(logHr, saveText);
-      localStorage.setItem(logHr, saveText)
-    } else {
-      if (saveArrayPoint = 12) {
-        let logHr = saveArrayPoint + 'PM'
-        console.log(logHr, saveText);
-        localStorage.setItem(logHr, saveText)
-      } else {
-        if (saveArrayPoint > 12) {
-          let logHr = saveArrayPoint - 12 + PM
-          console.log(logHr, saveText);
-          localStorage.setItem(logHr, saveText)
-        }
-      }
-    }
+      // localStorage.setItem('hr'+logHr, saveText)
+    // } else {
+    //   if (saveArrayPoint = 12) {
+    //     let logHr = saveArrayPoint + 'PM'
+    //     console.log(logHr, saveText);
+    //     localStorage.setItem(logHr, saveText)
+    //   } else {
+    //     if (saveArrayPoint > 12) {
+    //       let logHr = saveArrayPoint - 12 + 'PM'
+    //       console.log(logHr, saveText);
+    //       localStorage.setItem('hr'+logHr, saveText)
+    //     }
+    //   }
+  }
+  let isThisThingON = localStorage.getItem('9')
+  console.log(isThisThingON);
   });
 });
+
+// function updateTasks() {
+//   for (let i = 9; i <= 17; i++) {
+//     $(`#hourBlock-${i} .description`).val(localStorage.getItem({i}));
+//   }
+// }
+
+function updateTasks() {
+};
+
+
+
 // WHEN I refresh the page
 // THEN the saved events persist= local storage
 var keyList = Object.keys(localStorage)
 console.log(keyList);
+
+
+
+
+
+
+
+
 //stackoverflow
-$(document).ready(function () {
-  var savesnotesbtn = document.getElementById("savenotesbtn");
+// $(document).ready(function () {
+//   var savesnotesbtn = document.getElementById("savenotesbtn");
 
-  //FILL TEXT AREAS WITH NOTES
-  for (var i = 1; i < 11; i++) {
-    $("#note" + i + "input").val(localStorage.getItem("note" + i));
-  }
+//   //FILL TEXT AREAS WITH NOTES
+//   for (var i = 1; i < 11; i++) {
+//     $("#note" + i + "input").val(localStorage.getItem("note" + i));
+//   }
 
-  function saveNotes() {
-    //Change styles of button
-    $("#savenotesbtn").removeClass("notSaved").addClass("Saved");
-    // Save data to localstorage
-    for (var i = 1; i < 11; i++) {
-      localStorage.setItem("note" + i, $("#note" + i + "input").val());
-    }
-  };
-  savesnotesbtn.addEventListener("click", saveNotes);
-});
+//   function saveNotes() {
+//     //Change styles of button
+//     $("#savenotesbtn").removeClass("notSaved").addClass("Saved");
+//     // Save data to localstorage
+//     for (var i = 1; i < 11; i++) {
+//       localStorage.setItem("note" + i, $("#note" + i + "input").val());
+//     }
+//   };
+//   savesnotesbtn.addEventListener("click", saveNotes);
+// });
 //stack overflow
 
 //chat
-const id = document.getElementById("id");
-const textArea = document.getElementById("textArea");
-const key = id.innerHTML;
-const value = localStorage.getItem(key);
-if (value) {
-  textArea.value = value;
-}
+// const textArea = document.getElementById("textArea");
+// const key = id.innerHTML;
+// const value = localStorage.getItem(key);
+// if (value) {
+//   textArea.value = value;
+// }
 //
 
 
