@@ -1,54 +1,31 @@
-
 const textZones = [...document.querySelectorAll('.col-8')];
 const buttons = [...document.querySelectorAll('.btn')];
-// const textarray = document.getElementById('.9text')
-// const hourArray = ['9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM'];
-// console.log(hourArray);
 
 buttons.forEach(function(buttonArrayFinder) {
   buttonArrayFinder.addEventListener('click', function() {
     let saveArrayPoint = buttons.indexOf(this);
     console.log(saveArrayPoint);
     let saveText = textZones[saveArrayPoint].value
-    // let logHr = 'hr' + saveArrayPoint + 9 
-    let logHr = saveArrayPoint + 9
-    // console.log(logHr, saveText);
+    let log = saveArrayPoint + 9
+    let logHr = 'hr'+ log
     localStorage.setItem(logHr, saveText)
-
-    if (saveArrayPoint) {
-      console.log(logHr, saveText);
-      // localStorage.setItem('hr'+logHr, saveText)
-    // } else {
-    //   if (saveArrayPoint = 12) {
-    //     let logHr = saveArrayPoint + 'PM'
-    //     console.log(logHr, saveText);
-    //     localStorage.setItem(logHr, saveText)
-    //   } else {
-    //     if (saveArrayPoint > 12) {
-    //       let logHr = saveArrayPoint - 12 + 'PM'
-    //       console.log(logHr, saveText);
-    //       localStorage.setItem('hr'+logHr, saveText)
-    //     }
-    //   }
-  }
-  let isThisThingON = localStorage.getItem('9')
-  console.log(isThisThingON);
   });
 });
 
-// function updateTasks() {
-//   for (let i = 9; i <= 17; i++) {
-//     $(`#hourBlock-${i} .description`).val(localStorage.getItem({i}));
-//   }
-// }
-
 function updateTasks() {
-};
-
-
+  for (let i = 9; i <= 17; i++) {
+    $(`#hourBlock-${i} .description`).val(localStorage.getItem(`hr${i}`));
+  }
+}
 
 // WHEN I refresh the page
-// THEN the saved events persist= local storage
+// THEN the saved events persist
+function init() {
+  updateTasks();
+}
+init();
+
+
 var keyList = Object.keys(localStorage)
 console.log(keyList);
 
