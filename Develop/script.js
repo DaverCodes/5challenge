@@ -1,5 +1,6 @@
 const textZones = [...document.querySelectorAll('.col-8')];
 const buttons = [...document.querySelectorAll('.btn')];
+var colorHour = dayjs().hour();
 
 buttons.forEach(function(buttonArrayFinder) {
   buttonArrayFinder.addEventListener('click', function() {
@@ -16,6 +17,11 @@ function updateTasks() {
   for (let i = 9; i <= 17; i++) {
     $(`#hourBlock-${i} .description`).val(localStorage.getItem(`hr${i}`));
   }
+}
+
+for (let i = 9; i < 18; i++) {
+  var hour = $('#hourBlock-' + i)
+  hour.addClass(i < colorHour ? 'past' : (i === colorHour ? 'present' : 'future'))
 }
 
 // WHEN I refresh the page
