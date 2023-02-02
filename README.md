@@ -1,35 +1,17 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# color-reactive-schedule
 
-## Task
+- - -
+## User Experience Expectation
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+when the user is operating this deployment, they will be met with a simple top-down site that has the date and time visible on load followed by an array of text blocks with their hours indicated on the left along with their save buttons on the right.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+this sight allows the user to see the time as it is indicated at the top of the page along with a visual representation, as each hourly text block reacts to the time, being grey if the hour indicated is the past, orangew if the hour indicated is the present, and green if the hour indicated is the future. This color coding is designed to assist the user as they plan out their day, and when they save their text, they can easily close and reopen the schedule at any given time without losing important information.
 
-
-## Acceptance Criteria
-
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-
+## Check out my Deployment here! 
 https://davercodes.github.io/color-reactive-schedule/
 
 
-![plot](./Assets/davercodes.github.io_color-reactive-schedule_.png)
+![plot](./Assets//127.0.0.1_5500_index.html.png)
 
 ## Credits
 - - -
