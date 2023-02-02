@@ -1,18 +1,11 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-## Your Task
+## Task
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
 
-## User Story
-
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
 
 ## Acceptance Criteria
 
@@ -32,60 +25,22 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+https://davercodes.github.io/color-reactive-schedule/
 
-## Grading Requirements
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+![plot](./Assets/davercodes.github.io_color-reactive-schedule_.png)
 
-This Challenge is graded based on the following criteria:
+## Credits
+- - -
+the answers given on this stack overflow heavily inspired the way I pulled and pushed local storage information
+ https://stackoverflow.com/questions/42963091/how-to-save-the-value-of-textarea-to-localstorage-then-display-it-in-the-same-te 
 
-### Technical Acceptance Criteria: 40%
+A special thanks to Kyle Shakely for assistance regardint updating tasks and proper use of the localStorage.getItem function
 
-* Satisfies all of the above acceptance criteria plus the following:
+A special thanks to Jen Roberson for assistance with properly accessing the .css and .html information to make the time-color changing features work
 
-  * Uses a date utility library to work with date and time
 
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
 
 ## Review
 

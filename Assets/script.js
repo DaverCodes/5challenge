@@ -5,7 +5,6 @@ var colorHour = dayjs().hour();
 buttons.forEach(function(buttonArrayFinder) {
   buttonArrayFinder.addEventListener('click', function() {
     let saveArrayPoint = buttons.indexOf(this);
-    console.log(saveArrayPoint);
     let saveText = textZones[saveArrayPoint].value
     let log = saveArrayPoint + 9
     let logHr = 'hr'+ log
@@ -24,19 +23,10 @@ for (let i = 9; i < 18; i++) {
   hour.addClass(i < colorHour ? 'past' : (i === colorHour ? 'present' : 'future'))
 }
 
-// WHEN I refresh the page
-// THEN the saved events persist
 function init() {
   updateTasks();
 }
 init();
 
-
-var keyList = Object.keys(localStorage)
-console.log(keyList);
-
-
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar = add day.js
 var today = dayjs();
 $('#currentDay').text(today.format('MMM DD, YYYY [at] HH:mm a'));
